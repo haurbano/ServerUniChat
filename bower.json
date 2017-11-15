@@ -1,0 +1,9 @@
+{
+  "name": "UniChat",
+  "version": "0.0.1",
+  "dependencies": {
+    "jquery": "*",
+    "requirejs": "*",
+    "bootstrap": "v4.0.0-alpha.6"
+  }
+}

@@ -1,0 +1,26 @@
+extends layout
+
+block content
+  h1.block= "UniChat"
+  .row
+    .col-10
+      input#input_message.form-control(placeholder="Ingrese el mesaje") 
+    .col-2
+      button#btn_send_message.btn-primary Send message
+
+  .row.block
+    .col-4 
+      p#error Error: #{ err }
+    .col-4
+      p#error_msg msj: #{ msg }
+    .col-4
+      form(action="/remove_clients")
+        button.btn.btn-danger(type="submit") Borrar Clientes (Cuidado)
+
+  .block
+    h2 Clientes
+    #clients_table
+      include partials/clients_table.pug
+
+
+  script(src="./javascripts/index.js")
